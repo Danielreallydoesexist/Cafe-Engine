@@ -363,3 +363,7 @@ The existing self-closing form remains supported:
 - `src/platform/wiiu` — VPAD + KPAD homebrew main
 - `include/cafe/input` — platform-neutral input state
 - `examples/hello_world` — dual-screen demo (also packed as `hello_world.wuhb`)
+
+## License
+
+Cafe Engine's source code and documentation are licensed under the [MIT License](LICENSE). Bundled third-party files retain their own terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
