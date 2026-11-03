@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>Cafe Engine</name>
+  <coder>Cafe Engine contributors</coder>
+  <version>0.3.0</version>
+  <short_description>Dual-screen Cafe runtime with Wiimote</short_description>
+  <long_description>Runs Cafe Engine UML, CafeStyle, and CafeScript on Wii U with TV/GamePad scenes, GamePad touch, and Wii Remote IR pointing.</long_description>
+  <category>game</category>
+</app>
+

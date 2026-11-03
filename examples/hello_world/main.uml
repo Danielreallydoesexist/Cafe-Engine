@@ -1,0 +1,35 @@
+<UML>
+  <main>
+    <templates>
+      <sprite id="spark" class="spark" width="22" height="22" />
+    </templates>
+    <scene3d id="world" display="tv">
+      <spritelayer id="world-layer" order="0">
+        <image id="sky" class="backdrop" x="0" y="0" width="640" height="480" />
+        <image id="pngBadge" class="asset-badge" src="assets/player.png" x="34" y="34" width="80" height="80" />
+        <image id="svgBadge" class="asset-badge" src="assets/badge.svg" x="526" y="34" width="80" height="80" />
+      </spritelayer>
+      <camera id="camera" z="-6" fov="58" near="0.1" far="100" order="1" />
+      <group id="stage3d" order="2">
+        <cube id="heroCube" class="cube-main" x="-1.2" y="0" z="1" width="1.7" height="1.7" depth="1.7" />
+        <cube id="sideCube" class="cube-side" x="1.4" y="0.3" z="2" width="1.1" height="1.1" depth="1.1" rotation-x="20" rotation-y="35" />
+      </group>
+      <particles id="sparks" class="particles-add" x="320" y="425" rate="32" lifetime="1.4" speed="95" spread="70" gravity="80" particle-size="12" end-size="3" max="180" start-color="#ffffffff" end-color="#ffffff00" order="3" />
+      <particles id="confetti" class="particles-screen" x="320" y="425" rate="10" lifetime="1.8" speed="75" spread="110" gravity="55" shape="rectangle" particle-width="12" particle-height="4" end-size="2" spin="220" max="90" start-color="#58d8ffff" end-color="#8c5cffff" order="4" />
+      <audio id="wavSound" src="assets/chime.wav" />
+      <audio id="oggSound" src="assets/chime.ogg" />
+    </scene3d>
+    <scene id="hud" display="gamepad">
+      <ui id="hud-root" order="10">
+        <panel id="card" class="menu" x="190" y="90" width="330" height="300">
+          <text id="title" x="235" y="135">Cafe Engine</text>
+          <text id="message" class="caption" x="210" y="200">Controller: move / A: select</text>
+          <button id="play" class="primary" x="250" y="320" width="210" height="50">Burst + OGG</button>
+          <button id="reset" class="primary" x="250" y="260" width="210" height="50">Toggle + WAV</button>
+        </panel>
+      </ui>
+    </scene>
+  </main>
+  <style src="main.cstyle" />
+  <script src="main.cafe" />
+</UML>

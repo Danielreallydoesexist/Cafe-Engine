@@ -1,0 +1,9 @@
+# Two perpendicular faces sharing an edge. The loader generates a shared,
+# area-weighted normal for vertices in smoothing group 1.
+v -0.8 -0.8 0.0
+v  0.8 -0.8 0.0
+v -0.8  0.8 0.0
+v -0.8 -0.8 1.2
+s 1
+f 1 2 3
+f 1 4 2

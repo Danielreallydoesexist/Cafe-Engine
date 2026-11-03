@@ -1,0 +1,45 @@
+let score = 0;
+const settings = { speed: 140, greeting: "Controller: move  •  A: select" };
+const pointLabel = (x, y) => `Pointing ${Math.round(x)},${Math.round(y)}`;
+const deadzone = value => Math.abs(value) < 0.2 ? 0 : value;
+
+function load() {
+  message.text = settings.greeting;
+}
+
+function update(dt) {
+  heroCube.rotationY += dt * 42;
+  heroCube.rotationX += dt * 17;
+  sideCube.rotationY -= dt * 55;
+  const padX = deadzone(GamePad.leftX);
+  const padY = deadzone(GamePad.leftY);
+
+  if (WiiRemote.left) heroCube.x -= dt * 2;
+  if (WiiRemote.right) heroCube.x += dt * 2;
+  heroCube.x += WiiRemote.nunchuk.x * dt * 2;
+
+  // VPAD stick directions are also exposed as digital buttons on Wii U.
+  // Only add the digital step when the physical D-pad is being used, so an
+  // analog stick is not counted twice.
+  heroCube.x += padX * dt * 2;
+  heroCube.y += padY * dt * 2;
+  if (GamePad.left && padX === 0) heroCube.x -= dt * 2;
+  if (GamePad.right && padX === 0) heroCube.x += dt * 2;
+
+  if (WiiRemote.valid) message.text = pointLabel(WiiRemote.x, WiiRemote.y);
+}
+
+#play on click {
+  emitParticles(sparks, 55);
+  emitParticles(confetti, 24);
+  Audio.play("assets/chime.ogg", { volume: 0.35 });
+  score += 1;
+  message.text = `Particle burst ${score}`;
+}
+
+#reset on click {
+  sparks.emitting = !sparks.emitting;
+  confetti.emitting = sparks.emitting;
+  Audio.play("assets/chime.wav", { volume: 0.35 });
+  message.text = sparks.emitting ? "Emitter on" : "Emitter paused";
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>@GAME_NAME@</name>
+  <coder>@GAME_AUTHOR@</coder>
+  <version>0.3.0</version>
+  <short_description>@GAME_SHORT@</short_description>
+  <long_description>Cafe Engine game. Homebrew Launcher folder; Aroma can also launch the matching .wuhb.</long_description>
+  <category>game</category>
+</app>

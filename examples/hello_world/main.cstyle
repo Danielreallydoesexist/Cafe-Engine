@@ -1,0 +1,64 @@
+.backdrop {
+  fill: linear-gradient(to bottom, #17345f, #081426);
+  background: grid(#ffffff12, 1px, 32px);
+}
+
+.hero {
+  fill: radial-gradient(#ffe89a, #e98b2a);
+  border: 3px solid #fff2bb;
+  border-radius: 18px;
+  outer-shadow: 0 10px 22px #00000077;
+}
+
+.goal {
+  fill: radial-gradient(#7dffb1, #1f9d5b);
+  border: 3px solid #d6ffe6;
+  border-radius: 20px;
+}
+
+.asset-badge {
+  border: 3px solid #ffffff;
+  border-radius: 18px;
+  outer-shadow: 0 8px 18px #00000077;
+}
+
+.cube-main { fill: linear-gradient(135deg, #52caff, #745cff); shading: smooth; }
+.cube-side { fill: linear-gradient(135deg, #ffcf5a, #ff6f61); shading: flat; }
+.particles-add {
+  blend-mode: additive;
+  fill: radial-gradient(#ffffffff 0%, #ffffff00 100%);
+}
+.particles-screen { blend-mode: screen; }
+
+.spark {
+  fill: radial-gradient(#fff4c2, #ff7a1a);
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+}
+
+.menu {
+  fill: linear-gradient(to bottom, #52caff, #168bd0);
+  background: dotted-texture(#ffffff33, 3px, 18px);
+  border: 2px solid #a9eaff;
+  border-radius: 20px;
+  outer-shadow: 0 8px 20px #00000066;
+  inset-shadow: 0 2px 8px #ffffff44;
+  sawtooth-edge: bottom 14px 8px;
+}
+
+text { color: #ffffff; font-size: 22px; }
+#title { color: #ffffff; font-size: 32px; }
+.caption { color: #e8f8ff; font-size: 17px; }
+
+button {
+  fill: #103d70;
+  border: 2px solid #ffffff88;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 20px;
+  outer-shadow: 0 5px 10px #00305e88;
+}
+button:hover { fill: #185895; }
+button:pressed { fill: #092c52; }
+button:focus { fill: linear-gradient(90deg, #ff9b32, #ffcf5a); }
+button:disabled { fill: #68798a; color: #ffffff77; }
